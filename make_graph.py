@@ -1,10 +1,11 @@
 import  datetime
+import re
 import matplotlib.pyplot as plt
 
 def str_to_time(time_str):
-    time_list = time_str.split(":")
+    time_list = re.split("[:.]", time_str)
     if len(time_list) == 2:
-        ans = datetime.datetime.strptime(time_str, '%S.%L')
+        ans = datetime.datetime.strptime(time_str, '%S.%L') # error
         return ans
     elif len(time_list) == 3:
         ans = datetime.datetime.strptime(time_str, '%M:%S.%L') # error
