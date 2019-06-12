@@ -22,15 +22,15 @@ def str_to_time(time_str):
         main()
 
 def main():
-    name = input("名前を入力してください：")
-    event = input("種目名を入力してください：")
+    name = input("名前を入力してください(Write in English)：")
+    event = input("種目名を入力してください(Write in English)：")
     date = []
     time = []
     cnt = 1
 
     while True:
-        input_date = input("{0}つ目のタイム計測日を入力：".format(cnt))
-        input_time = input("{0}のタイムを入力：".format(input_date))
+        input_date = input("{0}つ目のタイム計測日を入力(ex: 2019-01-01)：".format(cnt))
+        input_time = input("{0}のタイムを入力(ex: 1:12.34)：".format(input_date))
         date.append(input_date)
         time.append(input_time)
         branch = input("入力を続けますか？(yes or no)：")
@@ -53,4 +53,5 @@ def main():
     plt.show()
 
 if __name__ == "__main__":
+    print("<Ver. 1.0.0: アルファベット入力のみに対応しています。>\n")
     main()
