@@ -21,7 +21,7 @@ def str_to_time(time_str):
         print("Error: 入力ミスがあります。最初から入力してください。")
         main()
 
-def main():
+def main():    
     name = input("名前を入力してください(Write in English)：")
     event = input("種目名を入力してください(Write in English)：")
     date = []
@@ -54,4 +54,5 @@ def main():
 
 if __name__ == "__main__":
     print("<Ver. 1.0.0: アルファベット入力のみに対応しています。>\n")
+    print("古い記録から順に入力してください")
     main()
