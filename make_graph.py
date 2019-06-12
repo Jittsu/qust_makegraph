@@ -1,14 +1,21 @@
 import  datetime
 import re
 import matplotlib.pyplot as plt
+import matplotlib.dates as mdates
 
 def str_to_time(time_str):
     time_list = re.split("[:.]", time_str)
     if len(time_list) == 2:
-        ans = datetime.datetime.strptime(time_str, '%S.%L') # error
+        min = 0
+        sec = int(time_list[0])
+        micro_sec = int(time_list[1]) * (10**4)
+        ans = datetime.timedelta(minutes=min, seconds=sec, microseconds=micro_sec)
         return ans
     elif len(time_list) == 3:
-        ans = datetime.datetime.strptime(time_str, '%M:%S.%L') # error
+        min = int(time_list[0])
+        sec = int(time_list[1])
+        micro_sec = int(time_list[2]) * (10**4)
+        ans = datetime.timedelta(minutes=min, seconds=sec, microseconds=micro_sec)
         return ans
     else:
         print("Error: 入力ミスがあります。最初から入力してください。")
@@ -36,12 +43,14 @@ def main():
             break
 
     x = [datetime.datetime.strptime(d, "%Y-%m-%d") for d in date]
-    y = [str_to_time(t) for t in time]
+    y = [str_to_time(t).total_seconds() for t in time]
 
+    plt.style.use("seaborn")
     plt.plot(x, y)
     plt.xlabel("DATE")
     plt.ylabel("TIME")
-    plt.title("{0}".format(name) + "：" + "{0}".format(event))
+    plt.title("{0}".format(name) + ":" + "{0}".format(event))
+    plt.show()
 
 if __name__ == "__main__":
     main()
