@@ -2,12 +2,12 @@
 
 ## Installation
 * win
-    * releasesをクリックした後，make_graphに含まれる"make_graph_win.zip"をダウンロード
+    * qustディレクトリに戻った後(ここはJittsu/qust/make_graph/ディレクトリ)，releasesをクリックした後，make_graphに含まれる"make_graph_win.zip"をダウンロード
     * ダウンロードしたmake_graph_win.zipを解凍
     * 展開されたmake_graph.exeをクリックして起動(コマンドプロンプト上で動きます)
 
 * mac
-    * releasesをクリックした後，make_graphに含まれる"make_graph_mac.zip"をダウンロード
+    * qustディレクトリに戻った後(ここはJittsu/qust/make_graph/ディレクトリ)，releasesをクリックした後，make_graphに含まれる"make_graph_mac.zip"をダウンロード
     * ダウンロードしたmake_graph_mac.zipを解凍
     * 展開されたmake_graphをクリックして起動(ターミナル上で動きます)
 
