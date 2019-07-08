@@ -22,8 +22,8 @@ def str_to_time(time_str):
         main()
 
 def main():    
-    name = input("名前を入力してください(Write in English)：")
-    event = input("種目名を入力してください(Write in English)：")
+    name = input("名前を入力してください(Write Alphabet)：")
+    event = input("種目名を入力してください(Write Alphabet)：")
     date = []
     time = []
     cnt = 1
@@ -53,6 +53,6 @@ def main():
     plt.show()
 
 if __name__ == "__main__":
-    print("<Ver. 1.0.0: アルファベット入力のみに対応しています。>\n")
+    print("<Ver. 1.0.1: アルファベット入力のみに対応しています。>\n")
     print("古い記録から順に入力してください")
     main()
