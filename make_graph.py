@@ -5,6 +5,7 @@ import matplotlib.dates as mdates
 
 def str_to_time(time_str):
     time_list = re.split("[:.]", time_str)
+
     if len(time_list) == 2:
         min = 0
         sec = int(time_list[0])
@@ -34,6 +35,7 @@ def main():
         date.append(input_date)
         time.append(input_time)
         branch = input("入力を続けますか？(yes or no)：")
+
         if branch == "yes":
             cnt += 1
         elif branch == "no":
